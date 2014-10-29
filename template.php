@@ -27,11 +27,15 @@ function sport_2014_css_alter(&$css) {
 }
 
 /**
- * Implements template_preprocess_page().
+ * Replace Panopoly Layouts with the Radix pendants.
+ *
+ * Implements hook_ctools_plugin_post_alter().
  */
-function sport_2014_preprocess_page(&$variables) {
-  // Add copyright to theme.
-  if ($copyright = theme_get_setting('copyright')) {
-    $variables['copyright'] = check_markup($copyright['value'], $copyright['format']);
+function sport_2014_ctools_plugin_post_alter(&$plugin, &$info) {
+  if (($info['type'] == 'layouts') && ($plugin['module'] == 'panopoly_theme')) {
+    if (strpos($plugin['theme'], 'radix_') === FALSE) {
+      $plugin['theme'] = 'radix_' . $plugin['theme'];
+      unset($plugin['css']);
+    }
   }
 }
