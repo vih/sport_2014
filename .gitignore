@@ -1,2 +1,4 @@
 styleguide
 node_modules
+Gemfile.lock
+.sass-cache
