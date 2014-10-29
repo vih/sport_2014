@@ -100,4 +100,3 @@
 </div>
 
 <div class="scroll-to-top"><a href="#"><?php print t('Back to Top'); ?></a></div>
-

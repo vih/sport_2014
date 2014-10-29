@@ -2479,3 +2479,20 @@ body {
     left: 487px;
   }
 }
+/* line 4, ../sass/partials/_scroll-to-top.scss */
+.scroll-to-top {
+  position: fixed;
+  background: url('../images/scroll-to-top.png?1414598646') no-repeat;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  bottom: 1em;
+  right: 2em;
+  padding-right: 2em;
+  display: none;
+  z-index: 999;
+}
+/* line 15, ../sass/partials/_scroll-to-top.scss */
+.scroll-to-top a {
+  display: none;
+}
