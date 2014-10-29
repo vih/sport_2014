@@ -1,3 +1,127 @@
+// Layout
 //
-// Styles for main layout
-// --------------------------------------------------
+// Styleguide 1
+
+// Adjust grid for 15 columns
+//
+// We have five packages, so need a 5 column grid on the frontpage
+//
+// @link http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/
+//
+// Markup:
+// <div class="row">
+//   <div class="col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first">
+//     <div class="views-field views-field-field-tags-picture">
+//       <div class="field-content">
+//         <a href="#">
+//           <img class="subject-packages-frontpage" src="http://placehold.it/145x400" width="145" height="400" />
+//         </a>
+//       </div>
+//     </div>
+//     <div class="views-field views-field-name">
+//       <span class="field-content">
+//         <a href="#">
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+//   <div class="col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first">
+//     <div class="views-field views-field-field-tags-picture">
+//       <div class="field-content">
+//         <a href="#">
+//           <img class="subject-packages-frontpage" src="http://placehold.it/145x400" width="145" height="400" />
+//         </a>
+//       </div>
+//     </div>
+//     <div class="views-field views-field-name">
+//       <span class="field-content">
+//         <a href="#">
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+//   <div class="col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first">
+//     <div class="views-field views-field-field-tags-picture">
+//       <div class="field-content">
+//         <a href="#">
+//           <img class="subject-packages-frontpage" src="http://placehold.it/145x400" width="145" height="400" />
+//         </a>
+//       </div>
+//     </div>
+//     <div class="views-field views-field-name">
+//       <span class="field-content">
+//         <a href="#">
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+//   <div class="col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first">
+//     <div class="views-field views-field-field-tags-picture">
+//       <div class="field-content">
+//         <a href="#">
+//           <img class="subject-packages-frontpage" src="http://placehold.it/145x400" width="145" height="400" />
+//         </a>
+//       </div>
+//     </div>
+//     <div class="views-field views-field-name">
+//       <span class="field-content">
+//         <a href="#">
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+//   <div class="col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first">
+//     <div class="views-field views-field-field-tags-picture">
+//       <div class="field-content">
+//         <a href="#">
+//           <img class="subject-packages-frontpage" src="http://placehold.it/145x400" width="145" height="400" />
+//         </a>
+//       </div>
+//     </div>
+//     <div class="views-field views-field-name">
+//       <span class="field-content">
+//         <a href="#">
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 1.2
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-15 {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+}
