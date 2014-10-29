@@ -2,6 +2,160 @@
 //
 // Styleguide 1
 
+$fade-percent: 18%;
+$shadow-color: #000;
+
+.l-highlighted {
+  background: $body-bg;
+  display: none;
+  @media (min-width: 992px) {
+    z-index: 120;
+    display: block;
+    border-left: 5px solid $branding-color;
+    border-bottom: 5px solid $branding-color;
+    border-right: 5px solid $branding-color;
+    @include border-bottom-radius(10px);
+    @include box-shadow($shadow-color 5px 5px 5px);
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+}
+
+.l-wrapper {
+  background: $body-bg;
+  position: relative;
+  @media (min-width: 992px) {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    @include border-bottom-right-radius(40px);
+    @include border-top-left-radius(40px);
+    @include box-shadow($shadow-color 5px 5px 5px);
+  }
+}
+
+.l-header {
+  @media (max-width: 991px) {
+    a {
+      display: none;
+    }
+  }
+  @media (min-width: 992px) {
+    padding: 20px;
+    a {
+      @include replace-text-with-dimensions("logo.gif");
+    }
+  }
+}
+
+.l-navigation {
+  background: $branding-color;
+  @media (min-width: 992px) {
+    #main-menu {
+       margin-top: 40px !important;
+    }
+    @include border-top-left-radius(30px);
+    @include background-image(linear-gradient($branding-color, darken($branding-color, $fade_percent)));
+    .navbar-brand {
+      display: none;
+    }
+    a {
+      font-weight: bold;
+      &:hover {
+        background: transparent !important;
+      }
+    }
+  }
+}
+
+.l-sidebar {
+  background: $branding-color;
+  @media (min-width: 992px) {
+    padding-top: 40px;
+    @include border-bottom-right-radius(30px);
+    @include background-image(linear-gradient($branding-color, darken($branding-color, $fade_percent)));
+  }
+}
+
+.l-footer {
+  padding-bottom: 20px;
+}
+
+// Columns of same height styles
+//
+// @link http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+//
+// <div class="container container-xs-height">
+//   <div class="row row-xs-height">
+//     <div class="col-xs-6 col-xs-height">Testing</div>
+//     <div class="col-xs-3 col-xs-height">Testing<br>Testing</div>
+//     <div class="col-xs-2 col-xs-height">Testing</div>
+//     <div class="col-xs-1 col-xs-height">Testing<br>Testing</div>
+//   </div>
+// </div>
+//
+// Styleguide 1.1
+.container-xs-height {
+  display:table;
+  padding-left:0px;
+  padding-right:0px;
+}
+.row-xs-height {
+  display:table-row;
+}
+.col-xs-height {
+  display:table-cell;
+  float:none;
+  vertical-align: top;
+}
+@media (min-width: 768px) {
+  .container-sm-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+  }
+  .row-sm-height {
+    display:table-row;
+  }
+  .col-sm-height {
+    display:table-cell;
+    float:none;
+    vertical-align: top;
+  }
+}
+@media (min-width: 992px) {
+  .container-md-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+  }
+  .row-md-height {
+    display:table-row;
+  }
+  .col-md-height {
+    display:table-cell;
+    float:none;
+    vertical-align: top;
+  }
+}
+@media (min-width: 1200px) {
+  .container-lg-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+  }
+  .row-lg-height {
+    display:table-row;
+  }
+  .col-lg-height {
+    display:table-cell;
+    float:none;
+    vertical-align: top;
+  }
+}
+
 // Adjust grid for 15 columns
 //
 // We have five packages, so need a 5 column grid on the frontpage

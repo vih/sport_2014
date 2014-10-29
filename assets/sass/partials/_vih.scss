@@ -1,0 +1,106 @@
+// Special styles used specificially for vih.dk
+//
+// Styleguide 8
+
+$opacity: 0.7;
+
+// Puts a link over a picture for a button effect
+//
+// $top       - How long from the top of the image
+// $font-size - Font size to user
+//
+// Styleguide 8.1
+@mixin picture-button($top, $font-size: "16px") {
+  position: relative;
+  top: $top;
+  height: 0px;
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: $font-size;
+    background: white;
+    padding: 5px 10px;
+    width: 100px;
+  }
+}
+
+// Puts an opaque link over a picture for a button effect
+//
+// $top       - How long from the top of the image
+// $width     - How wide should the text be
+// $font-size - Font size to user
+//
+// Styleguide 8.2
+@mixin picture-button-opaque($top, $width: "135px", $font-size: "12px") {
+  display: block;
+  position: relative;
+  top: $top;
+  height: 0px;
+  a {
+    display: block;
+    color: white;
+    font-size: $font-size;
+    font-weight: 600;
+    background: black;
+    padding: 5px 5px;
+    @include opacity($opacity);
+  }
+}
+
+.sidebar-slide {
+  .views-field-title {
+    @include picture-button-opaque(-70px, 134px);
+  }
+}
+
+.teachers {
+  .views-field-title {
+    width: 100%;
+    max-width: 145px;
+    @include picture-button-opaque(-70px);
+  }
+}
+
+.subjects-page {
+  .views-field-title {
+    width: 100%;
+    max-width: 145px;
+    @include picture-button-opaque(-60px);
+  }
+}
+
+.travel .views-field-title {
+  width: 100%;
+  max-width: 145px;
+  @include picture-button-opaque(-140px, 135px, 16px);
+}
+
+.subject-packages .views-field-name {
+  @include picture-button(-90px, 1.2em);
+}
+
+.short-course-types .views-field-name {
+  @include picture-button(-55px);
+}
+
+.faciliteter .views-field-title {
+  @include picture-button(-55px);
+}
+
+.navbar-default {
+  background: transparent !important;
+  border: transparent !important;
+
+  a {
+    color: white;
+  }
+}
+
+body {
+  background: green;
+  background-image: image-url("background/soccerfield2.jpg");
+}
+
+.media {
+  margin-bottom: 1em;
+}

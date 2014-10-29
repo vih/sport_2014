@@ -1,5 +1,5 @@
 name        = Sport 2014
-description = A theme based on Radix.
+description = Layout from 2008 created by Anders Bo Jensen, etwasanders. Based on Radix and Bootstrap 3.
 screenshot  = screenshot.png
 core        = 7.x
 
@@ -8,7 +8,12 @@ base theme  = radix
 
 
 ; Regions
+regions[highlighted] = Highlighted
 regions[content] = Content
+regions[sidebar_second] = Right sidebar
+regions[footer_first] = Footer first
+regions[footer_second] = Footer second
+
 
 ; Panels
 plugins[panels][layouts] = panels/layouts
@@ -25,10 +30,3 @@ stylesheets-conditional[IE 8][all][] = assets/stylesheets/ie8.css
 
 ; Javascript
 scripts[] = assets/javascripts/script.js
-
-; Information added by Drupal.org packaging script on 2014-06-14
-version = "7.x-3.0-beta1"
-core = "7.x"
-project = "radix"
-datestamp = "1402765730"
-
