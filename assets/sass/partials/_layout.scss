@@ -72,10 +72,15 @@ $shadow-color: #000;
 
 .l-sidebar {
   background: $brand-primary;
+  color: white;
   @media (min-width: 992px) {
     padding-top: 40px;
     @include border-bottom-right-radius(30px);
     @include background-image(linear-gradient($brand-primary, darken($brand-primary, $fade_percent)));
+  }
+  h2 {
+    color: white;
+    font-size: 1.2em;
   }
 }
 

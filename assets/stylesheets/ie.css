@@ -2166,6 +2166,7 @@ html.js fieldset.collapsed {
 /* line 73, ../sass/partials/_layout.scss */
 .l-sidebar {
   background: #008000;
+  color: white;
 }
 @media (min-width: 992px) {
   /* line 73, ../sass/partials/_layout.scss */
@@ -2182,25 +2183,30 @@ html.js fieldset.collapsed {
     background-image: linear-gradient(#008000, #002400);
   }
 }
+/* line 81, ../sass/partials/_layout.scss */
+.l-sidebar h2 {
+  color: white;
+  font-size: 1;
+}
 
-/* line 82, ../sass/partials/_layout.scss */
+/* line 87, ../sass/partials/_layout.scss */
 .l-footer {
   padding-bottom: 20px;
 }
 
-/* line 100, ../sass/partials/_layout.scss */
+/* line 105, ../sass/partials/_layout.scss */
 .container-xs-height {
   display: table;
   padding-left: 0px;
   padding-right: 0px;
 }
 
-/* line 105, ../sass/partials/_layout.scss */
+/* line 110, ../sass/partials/_layout.scss */
 .row-xs-height {
   display: table-row;
 }
 
-/* line 108, ../sass/partials/_layout.scss */
+/* line 113, ../sass/partials/_layout.scss */
 .col-xs-height {
   display: table-cell;
   float: none;
@@ -2208,19 +2214,19 @@ html.js fieldset.collapsed {
 }
 
 @media (min-width: 768px) {
-  /* line 114, ../sass/partials/_layout.scss */
+  /* line 119, ../sass/partials/_layout.scss */
   .container-sm-height {
     display: table;
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  /* line 119, ../sass/partials/_layout.scss */
+  /* line 124, ../sass/partials/_layout.scss */
   .row-sm-height {
     display: table-row;
   }
 
-  /* line 122, ../sass/partials/_layout.scss */
+  /* line 127, ../sass/partials/_layout.scss */
   .col-sm-height {
     display: table-cell;
     float: none;
@@ -2228,19 +2234,19 @@ html.js fieldset.collapsed {
   }
 }
 @media (min-width: 992px) {
-  /* line 129, ../sass/partials/_layout.scss */
+  /* line 134, ../sass/partials/_layout.scss */
   .container-md-height {
     display: table;
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  /* line 134, ../sass/partials/_layout.scss */
+  /* line 139, ../sass/partials/_layout.scss */
   .row-md-height {
     display: table-row;
   }
 
-  /* line 137, ../sass/partials/_layout.scss */
+  /* line 142, ../sass/partials/_layout.scss */
   .col-md-height {
     display: table-cell;
     float: none;
@@ -2248,26 +2254,26 @@ html.js fieldset.collapsed {
   }
 }
 @media (min-width: 1200px) {
-  /* line 144, ../sass/partials/_layout.scss */
+  /* line 149, ../sass/partials/_layout.scss */
   .container-lg-height {
     display: table;
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  /* line 149, ../sass/partials/_layout.scss */
+  /* line 154, ../sass/partials/_layout.scss */
   .row-lg-height {
     display: table-row;
   }
 
-  /* line 152, ../sass/partials/_layout.scss */
+  /* line 157, ../sass/partials/_layout.scss */
   .col-lg-height {
     display: table-cell;
     float: none;
     vertical-align: top;
   }
 }
-/* line 250, ../sass/partials/_layout.scss */
+/* line 255, ../sass/partials/_layout.scss */
 .col-xs-15,
 .col-sm-15,
 .col-md-15,
@@ -2278,28 +2284,28 @@ html.js fieldset.collapsed {
   padding-left: 10px;
 }
 
-/* line 260, ../sass/partials/_layout.scss */
+/* line 265, ../sass/partials/_layout.scss */
 .col-xs-15 {
   width: 20%;
   float: left;
 }
 
 @media (min-width: 768px) {
-  /* line 265, ../sass/partials/_layout.scss */
+  /* line 270, ../sass/partials/_layout.scss */
   .col-sm-15 {
     width: 20%;
     float: left;
   }
 }
 @media (min-width: 992px) {
-  /* line 271, ../sass/partials/_layout.scss */
+  /* line 276, ../sass/partials/_layout.scss */
   .col-md-15 {
     width: 20%;
     float: left;
   }
 }
 @media (min-width: 1200px) {
-  /* line 277, ../sass/partials/_layout.scss */
+  /* line 282, ../sass/partials/_layout.scss */
   .col-lg-15 {
     width: 20%;
     float: left;
@@ -2392,13 +2398,4 @@ html.js fieldset.collapsed {
   position: relative;
   top: -90px;
   height: 0px;
-}
-/* line 17, ../sass/partials/_vih.scss */
-.subject-packages .views-field-name a {
-  color: black;
-  text-decoration: none;
-  font-size: 1.2em;
-  background: white;
-  padding: 5px 10px;
-  width: 100px;
 }
