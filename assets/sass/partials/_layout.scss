@@ -11,9 +11,9 @@ $shadow-color: #000;
   @media (min-width: 992px) {
     z-index: 120;
     display: block;
-    border-left: 5px solid $branding-color;
-    border-bottom: 5px solid $branding-color;
-    border-right: 5px solid $branding-color;
+    border-left: 5px solid $brand-primary;
+    border-bottom: 5px solid $brand-primary;
+    border-right: 5px solid $brand-primary;
     @include border-bottom-radius(10px);
     @include box-shadow($shadow-color 5px 5px 5px);
   }
@@ -51,13 +51,13 @@ $shadow-color: #000;
 }
 
 .l-navigation {
-  background: $branding-color;
+  background: $brand-primary;
   @media (min-width: 992px) {
     #main-menu {
        margin-top: 40px !important;
     }
     @include border-top-left-radius(30px);
-    @include background-image(linear-gradient($branding-color, darken($branding-color, $fade_percent)));
+    @include background-image(linear-gradient($brand-primary, darken($brand-primary, $fade_percent)));
     .navbar-brand {
       display: none;
     }
@@ -71,11 +71,11 @@ $shadow-color: #000;
 }
 
 .l-sidebar {
-  background: $branding-color;
+  background: $brand-primary;
   @media (min-width: 992px) {
     padding-top: 40px;
     @include border-bottom-right-radius(30px);
-    @include background-image(linear-gradient($branding-color, darken($branding-color, $fade_percent)));
+    @include background-image(linear-gradient($brand-primary, darken($brand-primary, $fade_percent)));
   }
 }
 
