@@ -2077,8 +2077,8 @@ html.js fieldset.collapsed {
 }
 /* line 21, ../sass/partials/_layout.scss */
 .l-highlighted h2 {
+  font-size: 1em;
   margin-bottom: 0;
-  font-weight: bold;
 }
 
 /* line 27, ../sass/partials/_layout.scss */
