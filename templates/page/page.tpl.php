@@ -92,7 +92,7 @@
   <div class="col-md-7">
   </div>
   <div class="col-md-2">
-    <?php print render($page['footer_first']); ?>
+    <?php print render($page['footer_second']); ?>
   </div>
 </footer>
   <div class="prop-top"></div>
