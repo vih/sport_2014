@@ -39,3 +39,13 @@ function sport_2014_ctools_plugin_post_alter(&$plugin, &$info) {
     }
   }
 }
+
+function sport_2014_preprocess_node(&$vars) {
+  if ($vars['view_mode'] == 'teaser') {
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
+  }
+
+  if (strstr($vars['node']->type, 'short_course')) {
+    $vars['theme_hook_suggestions'][] = 'node__short_course__teaser';
+  }
+}
