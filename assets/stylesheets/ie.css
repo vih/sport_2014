@@ -2399,3 +2399,106 @@ html.js fieldset.collapsed {
   top: -90px;
   height: 0px;
 }
+/* line 17, ../sass/partials/_vih.scss */
+.subject-packages .views-field-name a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  background: white;
+  padding: 5px 10px;
+  width: 100px;
+}
+
+/* line 82, ../sass/partials/_vih.scss */
+.short-course-types .views-field-name {
+  position: relative;
+  top: -55px;
+  height: 0px;
+}
+/* line 17, ../sass/partials/_vih.scss */
+.short-course-types .views-field-name a {
+  color: black;
+  text-decoration: none;
+  font-size: "16px";
+  background: white;
+  padding: 5px 10px;
+  width: 100px;
+}
+
+/* line 86, ../sass/partials/_vih.scss */
+.faciliteter .views-field-title {
+  position: relative;
+  top: -55px;
+  height: 0px;
+}
+/* line 17, ../sass/partials/_vih.scss */
+.faciliteter .views-field-title a {
+  color: black;
+  text-decoration: none;
+  font-size: "16px";
+  background: white;
+  padding: 5px 10px;
+  width: 100px;
+}
+
+/* line 90, ../sass/partials/_vih.scss */
+.navbar-default {
+  background: transparent !important;
+  border: transparent !important;
+}
+/* line 94, ../sass/partials/_vih.scss */
+.navbar-default a {
+  color: white;
+}
+
+/* line 99, ../sass/partials/_vih.scss */
+body {
+  background: green;
+  background-image: url('../images/background/soccerfield2.jpg?1414609935');
+}
+
+/* line 104, ../sass/partials/_vih.scss */
+.media {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 992px) {
+  /* line 39, ../sass/partials/_props.scss */
+  .prop-top {
+    position: absolute;
+    z-index: 100;
+    width: 634px;
+    height: 394px;
+    background: url('../images/props/float_fodboldstoevle2.png?1414609181') no-repeat 0 0;
+    top: -284px;
+    left: -34px;
+  }
+
+  /* line 43, ../sass/partials/_props.scss */
+  .prop-bottom {
+    position: absolute;
+    z-index: 100;
+    width: 567px;
+    height: 425px;
+    background: url('../images/props/float_fodbold.png?1414609158') no-repeat 0 0;
+    bottom: -375px;
+    left: 487px;
+  }
+}
+/* line 4, ../sass/partials/_scroll-to-top.scss */
+.scroll-to-top {
+  position: fixed;
+  background: url('../images/scroll-to-top.png?1414624451') no-repeat;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  bottom: 1em;
+  right: 2em;
+  padding-right: 2em;
+  display: none;
+  z-index: 999;
+}
+/* line 15, ../sass/partials/_scroll-to-top.scss */
+.scroll-to-top a {
+  display: none;
+}
