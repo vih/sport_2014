@@ -2315,6 +2315,11 @@ html.js fieldset.collapsed {
     float: left;
   }
 }
+/* line 5, ../sass/partials/_view.scss */
+.views-view-grid .row {
+  margin-bottom: 1;
+}
+
 /* line 51, ../sass/partials/_vih.scss */
 .sidebar-slide .views-field-title {
   display: block;
