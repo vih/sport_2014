@@ -18,12 +18,6 @@ $shadow-color: #000;
     @include border-bottom-radius(10px);
     @include box-shadow($shadow-color 5px 5px 5px);
   }
-
-  h2 {
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 0;
-  }
 }
 
 .l-wrapper {

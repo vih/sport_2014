@@ -25,7 +25,7 @@
        ?>
       <div<?php if ($row_classes[$row_number]) { print ' class="row"';  } ?>>
         <?php foreach ($columns as $column_number => $item): ?>
-          <div<?php if ($column_classes[$row_number][$column_number]) { print ' class="col-md-' . $span_number . ' col-xs-' . $span_number / 2 . ' ' . $column_classes[$row_number][$column_number] .'"';  } ?>>
+          <div<?php if ($column_classes[$row_number][$column_number]) { print ' class="col-md-' . $span_number . ' col-xs-' . round($span_number / 2) . ' ' . $column_classes[$row_number][$column_number] .'"';  } ?>>
             <?php print $item; ?>
           </div>
         <?php endforeach; ?>
