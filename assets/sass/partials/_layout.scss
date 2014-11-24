@@ -9,6 +9,7 @@ $shadow-color: #000;
   background: $body-bg;
   display: none;
   @media (min-width: 992px) {
+    margin-top: -110px;
     z-index: 120;
     display: block;
     border-left: 5px solid $brand-primary;
@@ -20,6 +21,7 @@ $shadow-color: #000;
 
   h2 {
     font-size: 1em;
+    font-weight: bold;
     margin-bottom: 0;
   }
 }
@@ -81,6 +83,12 @@ $shadow-color: #000;
   h2 {
     color: white;
     font-size: 1.2em;
+  }
+  a {
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
