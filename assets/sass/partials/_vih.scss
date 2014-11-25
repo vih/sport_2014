@@ -104,3 +104,50 @@ body {
 .media {
   margin-bottom: 1em;
 }
+
+// Short courses
+form.commerce-add-to-cart {
+  .views-table {
+    margin-top: 1em;
+  }
+}
+
+.field-name-commerce-price .price-amount {
+  font-size: 2em;
+}
+
+.commerce-price-savings-formatter-prices td {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.field-name-field-pictures {
+  @include clearfix;
+  margin-bottom: 1em;
+  .colorbox {
+    margin-right: 8px;
+    float: left;
+  }
+}
+.teacher-context, .student-quotes {
+  div.media {
+    @include clearfix;
+    img {
+      float: left;
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+// Style for the date
+//
+// Add sufficient space under the time for the course.
+//
+// TODO: Should probably be done with a more global solution.
+//
+// Styleguide 9.0.0
+.field-name-field-course-time  {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

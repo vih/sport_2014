@@ -85,7 +85,7 @@
     <?php print render($content['field_picture']); ?>
   </div>
   <div class="media-body">
-    <h4 class="media-heading"><a href="<?php print $node_url; ?>"><?php print render($content['field_speaker']); ?>: <?php print $title; ?></a></h4>
+    <h4 class="media-heading"><a href="<?php print $node_url; ?>"><?php print strip_tags(render($content['field_speaker'])); ?>: <?php print strip_tags($title); ?></a></h4>
     <?php print render($content['body']); ?>
     <?php print render($content['field_date']); ?>
   </div>

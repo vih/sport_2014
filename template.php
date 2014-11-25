@@ -20,10 +20,13 @@ function sport_2014_css_alter(&$css) {
   $radix_path = drupal_get_path('theme', 'radix');
 
   // Radix now includes compiled stylesheets for demo purposes.
-  // We remove these from our subtheme since they are already included 
+  // We remove these from our subtheme since they are already included
   // in compass_radix.
   unset($css[$radix_path . '/assets/stylesheets/radix-style.css']);
   unset($css[$radix_path . '/assets/stylesheets/radix-print.css']);
+
+  // Unsetting system styles as they mess up the table styles.
+  unset($css[drupal_get_path('module','system').'/system.theme.css']);
 }
 
 /**
@@ -40,6 +43,11 @@ function sport_2014_ctools_plugin_post_alter(&$plugin, &$info) {
   }
 }
 
+/**
+ * Adds theme hook suggestions.
+ *
+ * Implements hook_preprocess_node().
+ */
 function sport_2014_preprocess_node(&$vars) {
   if ($vars['view_mode'] == 'teaser') {
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
