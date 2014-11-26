@@ -69,6 +69,8 @@ $shadow-color: #000;
 .l-sidebar {
   background: $brand-primary;
   color: white;
+  padding-top: 1em;
+  padding-bottom: 1em;
   @media (min-width: 992px) {
     padding-top: 40px;
     @include border-bottom-right-radius(30px);
