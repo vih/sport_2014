@@ -81,7 +81,7 @@
  */
 ?>
 <div class="media">
-  <div class="pull-left">
+  <div class="media-left">
     <?php print render($content['field_picture']); ?>
   </div>
   <div class="media-body">
