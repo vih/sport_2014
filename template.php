@@ -57,3 +57,13 @@ function sport_2014_preprocess_node(&$vars) {
     $vars['theme_hook_suggestions'][] = 'node__short_course__teaser';
   }
 }
+
+/**
+ * Theme function to render the confirmation message.
+ */
+function sport_2014_commerce_add_to_cart_confirmation_message($variables) {
+  $message = '<p>' . t('Successfully added person to registration') . '</p>';
+  $message .= '<div class="btn">' . l(t('Go to checkout'), 'checkout', array('attributes' => array('class' => 'btn btn-success btn-lg pull-left', 'role' => 'button')));
+  $message .= ' ' . l(t('Register more'), '', array('attributes' => array('class' => 'btn btn-default btn-lg pull-right', 'role' => 'button'), 'fragment' => 'edit-line-item-fields', 'external' => TRUE)) . '</div>';
+  return '<div class="well well-lg">' . $message . '</div>';
+}
