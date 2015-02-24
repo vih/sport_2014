@@ -96,6 +96,12 @@ $shadow-color: #000;
   padding-bottom: 20px;
 }
 
+.no-flexboxlegacy .l-main {
+  // IE does not like table cell in middle very much.
+  display: block;
+  width: 100% !important;
+}
+
 // Columns of same height styles
 //
 // @link http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
