@@ -10,6 +10,16 @@
 // --------------------------------------------------
 .view-lange-kurser,
 .view-short-courses,
+.view-vih-lectures,
+.view-article-teasers {
+  .media-body {
+    vertical-align: middle;
+    width: auto;
+  }
+}
+
+.view-lange-kurser,
+.view-short-courses,
 .view-vih-lectures {
   .media-left {
     width: 200px;
@@ -19,8 +29,15 @@
       height: auto;
     }
   }
-  .media-body {
-    vertical-align: middle;
-    width: auto;
+}
+
+.view-article-teasers {
+  .media-right {
+    width: 200px;
+    height: 200px;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
