@@ -4,4 +4,11 @@
 
 #main-menu {
   text-transform: uppercase;
+  > li.active {
+    .dropdown-menu {
+      display: block;
+      float: none;
+      position: relative;
+    }
+  }
 }
