@@ -9,6 +9,11 @@
       display: block;
       float: none;
       position: relative;
+      > li {
+        > a {
+          white-space: normal;
+        }
+      }
     }
   }
 }
