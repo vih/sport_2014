@@ -8,3 +8,10 @@
 // </fieldset>
 //
 // Styleguide 3
+
+.webform-container-inline {
+  .form-control {
+    display: inline-block;
+    width: auto;
+  }
+}
