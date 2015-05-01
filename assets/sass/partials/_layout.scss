@@ -5,6 +5,11 @@
 $fade-percent: 18%;
 $shadow-color: #000;
 
+// http://www.carsonshold.com/2014/07/css-display-table-cell-child-width-bug-in-firefox-and-ie/
+.container-md-height {
+  table-layout: fixed;
+}
+
 .l-highlighted {
   background: $body-bg;
   display: none;
