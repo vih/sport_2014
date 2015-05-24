@@ -168,4 +168,9 @@ form.commerce-add-to-cart {
   width: 100%;
   margin-bottom: 5px;
 }
-
+.l-highlighted {
+  @include pie-clearfix;
+  h2 {
+    font-size: 18px;
+  }
+}
