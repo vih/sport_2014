@@ -86,12 +86,10 @@
 </div> <!-- /#main-wrapper -->
   </div>
 <footer id="footer" class="footer l-footer" role="footer">
-  <div class="col-md-3">
+  <div class="col-md-12">
     <?php print render($page['footer_first']); ?>
   </div>
-  <div class="col-md-7">
-  </div>
-  <div class="col-md-2">
+  <div class="col-md-12">
     <?php print render($page['footer_second']); ?>
   </div>
 </footer>
