@@ -50,7 +50,10 @@ function sport_2014_ctools_plugin_post_alter(&$plugin, &$info) {
  */
 function sport_2014_preprocess_node(&$vars) {
   if ($vars['view_mode'] == 'teaser') {
-    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
+//    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
+    $suggestion_count = count($vars['theme_hook_suggestions']);
+    // Inject before last so we can control views rendering too
+    array_splice($vars['theme_hook_suggestions'], ($suggestion_count - 1), 0, array('node__' . $vars['node']->type . '__teaser'));
   }
 
   if (strstr($vars['node']->type, 'short_course')) {
