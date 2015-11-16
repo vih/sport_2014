@@ -106,6 +106,8 @@ body {
 }
 
 // Short courses
+//
+// Some additional styles for the short courses.
 form.commerce-add-to-cart {
   .views-table {
     margin-top: 1em;
@@ -129,6 +131,7 @@ form.commerce-add-to-cart {
     float: left;
   }
 }
+
 .teacher-context, .student-quotes {
   div.media {
     @include clearfix;
@@ -138,6 +141,10 @@ form.commerce-add-to-cart {
       margin-bottom: 1em;
     }
   }
+}
+
+div.field-name-field-registration {
+  @include button;
 }
 
 // Style for the date
