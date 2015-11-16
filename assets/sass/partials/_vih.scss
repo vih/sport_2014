@@ -105,6 +105,19 @@ body {
   margin-bottom: 1em;
 }
 
+// Commerce integration
+//
+// Some additional styles for the commerce integration
+div.alert-commerce-add-to-cart-confirmation {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  ul li:nth-of-type(1n+2) {
+    display: none;
+  }
+}
+
 // Short courses
 //
 // Some additional styles for the short courses.
@@ -143,8 +156,9 @@ form.commerce-add-to-cart {
   }
 }
 
-div.field-name-field-registration {
-  @include button;
+.field-name-field-registration a {
+  @extend .btn;
+  @extend .btn-success;
 }
 
 // Style for the date
