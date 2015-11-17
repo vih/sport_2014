@@ -59,7 +59,7 @@ $shadow-color: #000;
     }
     @include border-top-left-radius(30px);
     @include background-image(linear-gradient($brand-primary, darken($brand-primary, $fade_percent)));
-    .navbar-brand {
+    a#logo {
       display: none;
     }
     a {

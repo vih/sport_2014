@@ -16,7 +16,7 @@
 <div class="container l-wrapper">
   <header id="header" class="header l-header row" role="header">
     <div class="col-md-2 col-md-offset-10">
-      <a class="pull-right" href="<?php print $front_page; ?>" id="logo" class="navbar-brand">
+      <a class="pull-right" href="<?php print $front_page; ?>" class="navbar-brand">
         <?php print $site_name; ?>
       </a>
     </div>
