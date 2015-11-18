@@ -10,45 +10,72 @@
 // .quote - style the image div as a quote
 //
 // Styleguide 7.0.0
+
+$border-radius: 6px;
+
+// Default styles for the box.
+.pane-style-box {
+  @include border-radius($border-radius);
+  @include clearfix;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  a {
+    color: black;
+    text-transform: underline;
+  }
+}
+
+// Minor difference in color to the content background.
 .alternate {
-  background: #cbcbcb;
-  @include border-radius(8px);
-  @include clearfix;
-  margin-bottom: 1em;
-  padding: 1em;
-}
-
-div.emphasis {
-  background: black;
-  color: white;
-  @include border-radius(8px);
-  @include clearfix;
-  margin-bottom: 1em;
-  padding: 1em;
-}
-
-h2.pane-title.emphasis {
-  color: #36a4ef;
-}
-
-.jumbotron {
+  @extend .pane-style-box;
   background: #ddd;
-  @include border-radius(8px);
-  @include clearfix;
-  margin-bottom: 1em;
-  padding:2em;
-  border: 1px solid #cbcbcb;
+  padding: 1em;
 }
 
-.boxed {
-  background: #f6e49c;
-  @include border-radius(8px);
-  @include clearfix;
-  width: 90%;
-  margin: auto;
-  margin-bottom: 1em;
+// Larger padding than the other styles - similar to alternate.
+.jumbotron {
+  @extend .pane-style-box;
+  background: #ddd;
   padding: 2em;
-  @include box-shadow(darken(#f6e49c, 20%) 6px 6px 13px);
+  h2 {
+    font-size: 2em;
+  }
+}
+
+// Visible box with color and text change.
+.boxed {
+  @extend .pane-style-box;
+  background: #6595a9;
+  padding: 2em;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+// Major emphasis by color and text change.
+div.emphasis {
+  @extend .pane-style-box;
+  background: #fead42;
+  padding: 1.5em;
+  text-align: center;
+  p {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  h2.pane-title {
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    a {
+      color: black;
+      text-transform: underline;
+    }
+  }
+  a {
+    color: black;
+  }
 }
 
 .pane-bundle-image h2 {
@@ -79,7 +106,7 @@ h2.pane-title.emphasis {
 .quote {
   border: 2px solid #ddd;
   padding: 2em;
-  @include border-radius(10px);
+  @include border-radius(6px);
   margin-bottom: 1em;
 
   img {

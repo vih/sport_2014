@@ -21,6 +21,7 @@
 // --------------------------------------------------
 @import "bootswatch/bootswatch";
 
+
 // Theme CSS
 // --------------------------------------------------
 @import "global/font";
@@ -37,7 +38,8 @@
 @import "partials/user";
 @import "partials/media";
 
-// Specific for VIH
+// Specific for vih.dk
+// --------------------------------------------------
 @import "partials/vih";
 @import "partials/props";
 @import "partials/scroll-to-top";
