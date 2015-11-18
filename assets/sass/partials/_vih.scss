@@ -47,6 +47,11 @@ $opacity: 0.7;
   }
 }
 
+body {
+  background: green;
+  background-image: image-url("background/soccerfield2.jpg");
+}
+
 .sidebar-slide {
   .views-field-title {
     @include picture-button-opaque(-70px, 134px);
@@ -96,11 +101,6 @@ $opacity: 0.7;
   }
 }
 
-body {
-  background: green;
-  background-image: image-url("background/soccerfield2.jpg");
-}
-
 .media {
   margin-bottom: 1em;
 }
@@ -108,7 +108,28 @@ body {
 // Commerce integration
 //
 // Some additional styles for the commerce integration
+//
+// Markup:
+// <div class="alert alert-commerce-add-to-cart-confirmation alert-dismissable">
+//   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+//   <div class="well well-lg">
+//     <p>En person blev tilføjet til tilmeldingen.</p>
+//     <div class="btn">
+//       <a href="/checkout" class="btn btn-success btn-lg pull-left" role="button">Gå til betaling</a>
+//       <a href="#edit-line-item-fields" class="btn btn-default btn-lg pull-right" role="button">Tilmeld flere</a>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 8.3
 div.alert-commerce-add-to-cart-confirmation {
+  div.btn {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  a {
+    margin-right: 1em;
+  }
   ul {
     list-style-type: none;
     padding: 0;

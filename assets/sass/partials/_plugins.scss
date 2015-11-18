@@ -13,6 +13,7 @@
 
 $border-radius: 6px;
 
+// Highlight pane style for text widgets.
 // Default styles for the box.
 .pane-style-box {
   @include border-radius($border-radius);
@@ -82,32 +83,39 @@ div.emphasis {
   @include picture-button(25px, 2em);
 }
 
+// Render text widget as a call to action block.
 .call-to-action-block {
   text-align: center;
   background: black;
   color: white;
   padding: 2em;
-  h2, h3 {
-    font-size: 1.8em !important;
+  text-transform: uppercase;
+  h2 {
+    font-size: 1.8em;
   }
   h3 {
-    font-size: 1.6em !important;
+    font-size: 1.6em;
   }
   h4 {
-    font-size: 1.4em !important;
+    font-size: 1.4em;
   }
   p {
-    text-transform: uppercase !important;
     font-size: 1.2em;
   }
   margin-bottom: 1em;
+  a {
+    @extend .btn;
+    @extend .btn-lg;
+    background: orange;
+    color: white;
+  }
 }
 
+// Render image widget as a quote.
 .quote {
+  @extend .pane-style-box;
   border: 2px solid #ddd;
-  padding: 2em;
-  @include border-radius(6px);
-  margin-bottom: 1em;
+  padding: 3em;
 
   img {
     float: left;
@@ -115,8 +123,30 @@ div.emphasis {
     vertical-align: center;
   }
   .caption {
-    padding-top: 1em;
+    padding-top: 1.5em;
     padding-right: 30px;
     background: image-url("blockquote.png") top right no-repeat;
+  }
+}
+
+// Render links widget as buttons.
+.btn-links {
+  @include clearfix;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  li {
+    display: inline;
+    margin-right: 1em;
+    padding-left: 0;
+  }
+  li a {
+    @extend .btn;
+    @extend .btn-success;
+    @extend .btn-lg;
   }
 }

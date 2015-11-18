@@ -6,7 +6,8 @@
     "grunt-styleguide": "~0.2.17",
     "grunt-scss-lint": "~0.3.3",
     "jshint": "~2.5.7",
-    "grunt-contrib-jshint": "~0.10.0"
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-styledocco": "~0.2.1"
   },
   "scripts": {
     "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
