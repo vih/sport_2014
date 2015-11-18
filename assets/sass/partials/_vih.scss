@@ -183,15 +183,33 @@ form.commerce-add-to-cart {
 //
 // TODO: Should probably be done with a more global solution.
 //
-// Styleguide 9.0.0
+// Styleguide 9.0
 .field-name-field-course-time  {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
+// Style for the date field on the lectures
+//
+// Markup:
+// <div class="field-item even">
+//   <span class="date-display-single">Tirsdag, november 24, 2015 - 
+//     <div class="date-display-range">
+//       <span class="date-display-start">19:00</span> til <span class="date-display-end">20:30</span>
+//     </div>
+//   </span>
+// </div>
+//
+// Styleguide 9.1
+
+div.date-display-range {
+  display: inline;
+}
+
 .pane-content {
   margin-bottom: 1em;
 }
+
 .field img.panopoly-image-spotlight {
   width: 100%;
 }
@@ -202,6 +220,7 @@ form.commerce-add-to-cart {
   max-width: 100%;
   height: auto;
 }
+
 .field-name-field-vih-schedule iframe {
   display: block;
   width: 100%;
