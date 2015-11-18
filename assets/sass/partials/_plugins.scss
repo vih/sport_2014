@@ -2,19 +2,36 @@
 //
 // Stying used for panels styles plugins provided by VIH Plugins module
 //
+// Styleguide 7
+
+// Highlighted boxes for panes
+//
 // .alternate - be different from the background
 // .emphasis - emphasis on the div
 // .jumbotron - emphasis on the div
 // .boxed - put a box around the div
 // .call-to-action-block - make any links in the pane into a cta button
-// .quote - style the image div as a quote
 //
-// Styleguide 7.0.0
+// Markup:
+// <div class="{$modifiers}">
+//   <h3>Tester hvordan det ser ud</h3>
+//   <div class="fieldable-panels-pane">
+//     <div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden">
+//       <div class="field-items">
+//         <div class="field-item even">
+//           <p>Tester ksdfs sdfkds kslf sdlkf afdksl fjsdalkf djlkasfjdsklf jlskafj sdlfk sdlkafjd lkfjsdakl jfsdklfj kldajf kldsjfkl jdasfkl jdfklj saklfj dklsaf j.</p>
+//           <p><a href="node/1">Book nu</a></p>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 7.1
 
 $border-radius: 6px;
 
 // Highlight pane style for text widgets.
-// Default styles for the box.
 .pane-style-box {
   @include border-radius($border-radius);
   @include clearfix;
@@ -84,6 +101,23 @@ div.emphasis {
 }
 
 // Render text widget as a call to action block.
+//
+// Markup:
+// <div class="call-to-action-block">
+//   <h3>Tester hvordan det ser ud</h3>
+//   <div class="fieldable-panels-pane">
+//     <div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden">
+//       <div class="field-items">
+//         <div class="field-item even">
+//           <p>Tester ksdfs sdfkds kslf sdlkf afdksl fjsdalkf djlkasfjdsklf jlskafj sdlfk sdlkafjd lkfjsdakl jfsdklfj kldajf kldsjfkl jdasfkl jdfklj saklfj dklsaf j.</p>
+//           <p><a href="node/1">Book nu</a></p>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 7.2
 .call-to-action-block {
   text-align: center;
   background: black;
@@ -112,6 +146,20 @@ div.emphasis {
 }
 
 // Render image widget as a quote.
+//
+// .quote - style the image div as a quote
+//
+// Markup:
+// <div class="quote clearfix">
+//   <span class="helper"></span>
+//   <img src="http://placehold.it/200x300" />
+//   <div class="caption">
+//     <p>Jeg har faktisk rigtig meget fedt at sige om skolen, men jeg skal bare lige have det sagt på en ordentlig måde, så alle kan forstå det.</p>
+//     <p style="text-align:right">- Svend Brinkman</p>
+//   </div>
+// </div>
+//
+// Styleguide 7.3
 .quote {
   @extend .pane-style-box;
   border: 2px solid #ddd;
@@ -130,6 +178,20 @@ div.emphasis {
 }
 
 // Render links widget as buttons.
+//
+// Markup:
+// <div class="btn-links">
+//   <div class="fieldable-panels-pane">
+//     <div class="item-list">
+//       <ul>
+//         <li class="first"><a href="#">Tester</a></li>
+//         <li class="last"><a href="#">TEste </a></li>
+//       </ul>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 7.4
 .btn-links {
   @include clearfix;
   margin-top: 1em;

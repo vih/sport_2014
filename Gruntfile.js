@@ -15,23 +15,14 @@ module.exports = function(grunt) {
         cssDir: ['assets/stylesheets']
 		  }
     },
-    styleguide: {
+    kss: {
       options: {
-        framework: {
-          name: 'kss',
-          options: {
-            'css': 'assets/stylesheets/screen.css'
-          }
-        },
-        name: 'VIH Style Guide',
+        includeType: 'css',
+        includePath: 'assets/stylesheets/screen.css',
       },
-      your_target: {
-        options: {
-          // task options
-        },
+      dist: {
         files: {
-          // files to process
-          'styleguide': 'assets/sass/**/*.{scss,sass}'
+          'styleguide': ['assets/sass/']
         }
       }
     },
@@ -62,7 +53,7 @@ module.exports = function(grunt) {
   // Load the plugin
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-styleguide');
+  grunt.loadNpmTasks('grunt-kss');
   grunt.loadNpmTasks('grunt-scss-lint');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
