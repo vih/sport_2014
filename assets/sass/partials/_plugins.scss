@@ -6,11 +6,12 @@
 
 // Highlighted boxes for panes
 //
+// These can be used for both panes and regions.
+//
 // .alternate - be different from the background
 // .emphasis - emphasis on the div
 // .jumbotron - emphasis on the div
 // .boxed - put a box around the div
-// .call-to-action-block - make any links in the pane into a cta button
 //
 // Markup:
 // <div class="{$modifiers}">
@@ -102,6 +103,8 @@ div.emphasis {
 
 // Render text widget as a call to action block.
 //
+// This is mainly meant for use with text widgets.
+//
 // Markup:
 // <div class="call-to-action-block">
 //   <h3>Tester hvordan det ser ud</h3>
@@ -147,10 +150,11 @@ div.emphasis {
 
 // Render image widget as a quote.
 //
-// .quote - style the image div as a quote
+// .testimonial - style the image div as a testimonial
+// .contact - style image as a reach out for contact
 //
 // Markup:
-// <div class="quote clearfix">
+// <div class="{$modifiers} clearfix">
 //   <span class="helper"></span>
 //   <img src="http://placehold.it/200x300" />
 //   <div class="caption">
@@ -160,7 +164,7 @@ div.emphasis {
 // </div>
 //
 // Styleguide 7.3
-.quote {
+.testimonial {
   @extend .pane-style-box;
   border: 2px solid #ddd;
   padding: 3em;
@@ -174,6 +178,21 @@ div.emphasis {
     padding-top: 1.5em;
     padding-right: 30px;
     background: image-url("blockquote.png") top right no-repeat;
+  }
+}
+
+.contact {
+  @extend .pane-style-box;
+  background: #ddd;
+  padding: 3em;
+
+  img {
+    float: right;
+    margin-left: 20px;
+    vertical-align: center;
+  }
+  .caption {
+    padding-top: 1.5em;
   }
 }
 
