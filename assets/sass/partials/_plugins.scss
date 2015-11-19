@@ -203,6 +203,10 @@ div.emphasis {
     padding-top: 1.5em;
     padding-right: 30px;
     background: image-url("blockquote.png") top right no-repeat;
+
+    .author {
+      text-align: right;
+    }
   }
 }
 
