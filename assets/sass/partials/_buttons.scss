@@ -30,6 +30,7 @@
 .field-name-field-registration a {
   @extend .btn;
   @extend .btn-primary;
+  @extend .btn-lg;
 }
 
 // Webform next buttons
@@ -41,6 +42,8 @@
 //
 // Styleguide 2.3
 
-.webform-next, .checkout-continue {
+.webform-next, .webform-submit, .checkout-continue {
+  margin-top: 1em;
   @extend .btn-primary;
+  @extend .btn-lg;
 }

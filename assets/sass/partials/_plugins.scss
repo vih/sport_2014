@@ -12,6 +12,7 @@
 // .emphasis - emphasis on the div
 // .jumbotron - emphasis on the div
 // .boxed - put a box around the div
+// .inverted - invert the colors
 //
 // Markup:
 // <div class="{$modifiers}">
@@ -49,6 +50,12 @@ $border-radius: 6px;
   @extend .pane-style-box;
   background: #ddd;
   padding: 1em;
+  &.cta-button .pane-content a {
+    @extend .btn;
+    @extend .btn-lg;
+    background: orange;
+    color: white;
+  }
 }
 
 // Larger padding than the other styles - similar to alternate.
@@ -58,6 +65,12 @@ $border-radius: 6px;
   padding: 2em;
   h2 {
     font-size: 2em;
+  }
+  &.cta-button .pane-content a {
+    @extend .btn;
+    @extend .btn-lg;
+    background: orange;
+    color: white;
   }
 }
 
@@ -69,6 +82,12 @@ $border-radius: 6px;
   color: white;
   a {
     color: white;
+  }
+  &.cta-button .pane-content a {
+    @extend .btn;
+    @extend .btn-lg;
+    background: white;
+    color: #6595a9;
   }
 }
 
@@ -94,6 +113,12 @@ div.emphasis {
   }
   a {
     color: black;
+  }
+  &.cta-button .pane-content a {
+    @extend .btn;
+    @extend .btn-lg;
+    background: black;
+    color: white;
   }
 }
 
@@ -121,7 +146,7 @@ div.emphasis {
 // </div>
 //
 // Styleguide 7.2
-.call-to-action-block {
+.inverted {
   text-align: center;
   background: black;
   color: white;
@@ -140,7 +165,7 @@ div.emphasis {
     font-size: 1.2em;
   }
   margin-bottom: 1em;
-  a {
+  &.cta-button .pane-content a {
     @extend .btn;
     @extend .btn-lg;
     background: orange;

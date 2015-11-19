@@ -62,6 +62,20 @@ function sport_2014_preprocess_node(&$vars) {
 }
 
 /**
+* Implements template_preprocess_panels_pane().
+*/
+function sport_2014_preprocess_panels_pane(&$vars) {
+  if (!empty($vars['settings']['style'])) {
+    $style = $vars['settings']['style'];
+    $vars['classes_array'][] = drupal_clean_css_identifier($style);
+  }
+  if (!empty($vars['settings']['cta'])) {
+    $style = $vars['settings']['cta'];
+    $vars['classes_array'][] = drupal_clean_css_identifier($style);
+  }
+}
+
+/**
  * Theme function to render the confirmation message.
  */
 function sport_2014_commerce_add_to_cart_confirmation_message($variables) {
