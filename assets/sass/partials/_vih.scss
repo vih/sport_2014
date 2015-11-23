@@ -226,9 +226,14 @@ div.date-display-range {
   width: 100%;
   margin-bottom: 5px;
 }
+
 .l-highlighted {
   @include pie-clearfix;
   h2 {
     font-size: 18px;
   }
+}
+
+a.pdf-reader-download-link {
+  display: block;
 }

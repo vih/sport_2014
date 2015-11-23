@@ -4,7 +4,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-compass": "~1.0.1",
     "kss": "~2.1.0",
-    "grunt-kss": "~0.2.8",
+    "grunt-kss": "0.2.6",
     "grunt-scss-lint": "~0.3.3",
     "jshint": "~2.9.1-rc1",
     "grunt-contrib-jshint": "~0.10.0"

@@ -130,8 +130,16 @@ div.emphasis {
 //
 // This is mainly meant for use with text widgets.
 //
+// These can be used for text widgets
+//
+// .alternate - be different from the background
+// .emphasis - emphasis on the div
+// .jumbotron - emphasis on the div
+// .boxed - put a box around the div
+// .inverted - invert the colors
+//
 // Markup:
-// <div class="call-to-action-block">
+// <div class="{$modifiers} cta-button">
 //   <h3>Tester hvordan det ser ud</h3>
 //   <div class="fieldable-panels-pane">
 //     <div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden">
