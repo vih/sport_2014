@@ -17,8 +17,7 @@ module.exports = function(grunt) {
     },
     kss: {
       options: {
-        includeType: 'css',
-        includePath: 'assets/stylesheets/screen.css',
+        css: '../assets/stylesheets/screen.css',
       },
       dist: {
         files: {
@@ -50,7 +49,7 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin
+  // Load the plugins
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-kss');

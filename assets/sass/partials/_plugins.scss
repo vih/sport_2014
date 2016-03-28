@@ -15,7 +15,7 @@
 // .inverted - invert the colors
 //
 // Markup:
-// <div class="{$modifiers}">
+// <div class="{{modifier_class}}">
 //   <h3>Tester hvordan det ser ud</h3>
 //   <div class="fieldable-panels-pane">
 //     <div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden">
@@ -139,7 +139,7 @@ div.emphasis {
 // .inverted - invert the colors
 //
 // Markup:
-// <div class="{$modifiers} cta-button">
+// <div class="{{modifier_class}} cta-button">
 //   <h3>Tester hvordan det ser ud</h3>
 //   <div class="fieldable-panels-pane">
 //     <div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden">
@@ -187,7 +187,7 @@ div.emphasis {
 // .contact - style image as a reach out for contact
 //
 // Markup:
-// <div class="{$modifiers} clearfix">
+// <div class="{{modifier_class}} clearfix">
 //   <span class="helper"></span>
 //   <img src="http://placehold.it/200x300" />
 //   <div class="caption">
