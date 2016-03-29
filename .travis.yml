@@ -27,4 +27,7 @@ before_script:
   - npm install bower -g
   - npm run setup
 script:
-  - gulp
+  - gulp css
+  - gulp js
+  - gulp images
+  - gulp fonts
