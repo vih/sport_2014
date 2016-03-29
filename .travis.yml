@@ -28,6 +28,7 @@ install:
   - bundle install
   - npm install -g gulp
   - npm install bower -g
+  - npm install kss -g
   - npm run setup
 script:
   - gulp css
@@ -36,3 +37,4 @@ script:
   - gulp fonts
   - gulp scss-lint
   - gulp js-lint
+  - gulp kss

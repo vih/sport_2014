@@ -21,6 +21,7 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var scsslint = require('gulp-scss-lint');
 var jshint = require('gulp-jshint');
+var run = require('gulp-run');
 
 // CSS.
 gulp.task('css', function() {
@@ -113,6 +114,11 @@ gulp.task('js-lint', function() {
   return gulp.src('./assets/js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
+});
+
+// Styleguide creation.
+gulp.task('kss', function () {
+  run('kss-node scss/ styleguide/ --css ../assets/css/sport_2014.style.css --mask *.scss --homepage=styleguide.md --title="Styleguide for vih.dk"').exec();
 });
 
 // Default Task
