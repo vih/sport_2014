@@ -4,49 +4,6 @@
 
 $opacity: 0.7;
 
-// Puts a link over a picture for a button effect
-//
-// $top       - How long from the top of the image
-// $font-size - Font size to user
-//
-// Styleguide 8.1
-@mixin picture-button($top, $font-size: "16px") {
-  position: relative;
-  top: $top;
-  height: 0px;
-  a {
-    color: black;
-    text-decoration: none;
-    font-size: $font-size;
-    background: white;
-    padding: 5px 10px;
-    width: 100px;
-  }
-}
-
-// Puts an opaque link over a picture for a button effect
-//
-// $top       - How long from the top of the image
-// $width     - How wide should the text be
-// $font-size - Font size to user
-//
-// Styleguide 8.2
-@mixin picture-button-opaque($top, $width: "135px", $font-size: "12px") {
-  display: block;
-  position: relative;
-  top: $top;
-  height: 0px;
-  a {
-    display: block;
-    color: white;
-    font-size: $font-size;
-    font-weight: 600;
-    background: black;
-    padding: 5px 5px;
-    @include opacity($opacity);
-  }
-}
-
 body {
   background: green;
   background-image: image-url("background/soccerfield2.jpg");
