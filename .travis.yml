@@ -35,3 +35,4 @@ script:
   - gulp images
   - gulp fonts
   - gulp scss-lint
+  - gulp js-lint
