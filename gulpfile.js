@@ -2,6 +2,8 @@ var Promise = require('es6-promise').Promise;
 // Include gulp.
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
+
+// Include config.
 var config = require('./config.json');
 
 // Include plugins.
@@ -17,6 +19,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
+var scsslint = require('gulp-scss-lint');
 
 // CSS.
 gulp.task('css', function() {
@@ -96,6 +99,13 @@ gulp.task('serve', ['css', 'js', 'fonts'], function() {
 gulp.task('drush', shell.task([
   'drush cache-clear theme-registry'
 ]));
+
+// SCSS Linting.
+gulp.task('scss-lint', function() {
+  return gulp.src('scss/**/*.scss')
+    .pipe(scsslint())
+    .pipe(scsslint.failReporter());
+});
 
 // Default Task
 gulp.task('default', ['serve']);

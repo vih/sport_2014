@@ -24,6 +24,7 @@
     "gulp-uglify": "^1.5.1"
   },
   "devDependencies": {
-    "es6-promise": "~3.1.2"
+    "es6-promise": "~3.1.2",
+    "gulp-scss-lint": "~0.3.9"
   }
 }
