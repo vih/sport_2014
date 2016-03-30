@@ -1,0 +1,56 @@
+// Buttons
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+//
+// scss-lint:disable PlaceholderInExtend
+//
+// Styleguide 2
+
+
+// Base styles & states
+//
+// :hover       - Hover state.
+// :active      - Active state.
+// .disabled    - Disabled button. If you use `<button>` element, that is acceptable to add `disabled` attribute instead.
+//
+// Markup:
+// <button type="submit" class="btn btn-primary {{modifier_class}}">Button</button>
+// <button type="submit" class="btn {{modifier_class}}">Button</button>
+//
+// Styleguide 2.1
+
+// Styles for registration link on short courses external.
+//
+// Markup:
+// <div class="field-name-field-registration">
+//   <div><a href="#">Tilmeld mig nu</a></div>
+// </div>
+//
+// Styleguide 2.2
+
+.field-name-field-registration a {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+}
+
+// Webform next buttons
+//
+// Markup:
+// <div class="form-actions">
+//   <input class="webform-next button-primary btn btn-default">
+// </div>
+//
+// Styleguide 2.3
+
+// scss-lint:disable IdSelector
+.webform-next,
+.webform-submit,
+.checkout-continue,
+#edit-submit {
+  @extend .btn-primary;
+  @extend .btn-lg;
+  margin-top: 1em;
+}

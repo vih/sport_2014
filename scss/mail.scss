@@ -1,0 +1,152 @@
+// scss-lint:disable SelectorDepth, NestingDepth
+
+.message-wrapper {
+  background-color: $white;
+  width: 800px;
+
+  .header,
+  .body {
+    background-color: $white;
+    padding: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .header {
+    background-color: $white;
+    color: $black;
+    height: 100px;
+
+    .logo {
+      float: left;
+    }
+
+    .thank-you {
+      float: right;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+
+  .body {
+    border: solid 1px $gray-light;
+    padding: 10px;
+  }
+
+  .detail {
+    color: $gray;
+    font-size: 18px;
+    padding-bottom: 15px;
+
+    span {
+      color: $brand-primary;
+
+      a {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  .view-order-status {
+    margin-bottom: 30px;
+
+    a {
+      background-color: $brand-primary;
+      border-radius: 50px;
+      color: $white;
+      font-weight: bold;
+      padding: 10px 30px;
+      width: auto;
+    }
+  }
+
+  .ship-to {
+    float: left;
+    margin-bottom: 30px;
+  }
+
+  .ship-to .ship-to-title,
+  .ship-method .ship-method-title,
+  .order-summary-wrapper .items-title {
+    color: $black;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .ship-method .express-delivery,
+  .ship-method p,
+  .ship-to .addressfield-container-inline *,
+  .ship-to .street-block,
+  .ship-to .country {
+    color: $gray;
+    font-size: 17px;
+  }
+
+  .shipping-wrapper p {
+    margin-top: 0;
+  }
+
+  .ship-to .first-name,
+  .ship-to .last-name,
+  .ship-to .name-block,
+  .ship-method .express-delivery {
+    font-weight: bold;
+  }
+
+  .ship-method {
+    float: right; // LTR
+   }
+
+  .shipping-wrapper,
+  .order-summary-wrapper {
+    clear: both;
+  }
+
+  .order-summary-wrapper .view-commerce-cart-summary table {
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
+
+    th {
+      background: transparent;
+      border: 0;
+      border-bottom: $gray-light solid 1px;
+      color: $black;
+      font-weight: bold;
+      text-align: left;
+      text-transform: none;
+    }
+
+    tr {
+      background: transparent;
+      border: 0;
+      padding: 10px;
+      text-align: left;
+    }
+  }
+
+  .order-summary-wrapper .commerce-price-formatted-components {
+    float: right; // LTR
+    margin-bottom: 30px;
+    width: auto;
+
+    td {
+      padding: 10px;
+      text-align: right; // LTR
+    }
+  }
+
+  .question {
+    clear: both;
+
+    a {
+      color: $brand-primary;
+    }
+  }
+}
+
+.view-commerce-cart-summary .views-table tbody td {
+  padding: 20px 10px;
+}

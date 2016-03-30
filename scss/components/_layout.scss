@@ -1,0 +1,344 @@
+// Layout
+//
+// Styleguide 1
+
+$fade-percent: 18%;
+$shadow-color: $black;
+
+// http://www.carsonshold.com/2014/07/css-display-table-cell-child-width-bug-in-firefox-and-ie/
+.container-md-height {
+  table-layout: fixed;
+}
+
+.l-highlighted {
+  background: $body-bg;
+  display: none;
+
+  @media (min-width: 992px) {
+    @include border-bottom-radius(10px);
+    @include box-shadow($shadow-color 5px 5px 5px);
+    border-bottom: 5px solid $brand-primary;
+    border-left: 5px solid $brand-primary;
+    border-right: 5px solid $brand-primary;
+    display: block;
+    margin-top: -110px;
+    z-index: 120;
+  }
+}
+
+.l-wrapper {
+  background: $body-bg;
+  position: relative;
+
+  @media (min-width: $screen-md-min) {
+    @include border-bottom-right-radius(40px);
+    @include border-top-left-radius(40px);
+    @include box-shadow($shadow-color 5px 5px 5px);
+    margin-bottom: 20px;
+    margin-top: 100px;
+  }
+}
+
+.l-header {
+  @media (max-width: $screen-md-min) {
+    a {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding: 20px;
+
+    a {
+      background: url('../images/logo.gif') no-repeat top right;
+      height: 90px;
+      margin: 0 0 0 -2000px;
+      width: 2350px;
+    }
+  }
+}
+
+// scss-lint:disable ImportantRule
+.l-navigation {
+  background: $brand-primary;
+
+  @media (min-width: $screen-md-min) {
+    @include border-top-left-radius(30px);
+    @include background-image(linear-gradient($brand-primary, darken($brand-primary, $fade-percent)));
+
+    // scss-lint:disable IdSelector
+    #main-menu {
+      margin-top: 40px !important;
+    }
+
+    // scss-lint:disable IdSelector
+    #logo {
+      display: none;
+    }
+
+    a {
+      font-weight: bold;
+
+      &:hover {
+        background: transparent !important;
+      }
+    }
+  }
+}
+
+.l-sidebar {
+  background: $brand-primary;
+  color: $white;
+  padding-bottom: 1em;
+  padding-top: 1em;
+
+  @media (min-width: $screen-md-min) {
+    @include border-bottom-right-radius(30px);
+    @include background-image(linear-gradient($brand-primary, darken($brand-primary, $fade-percent)));
+    padding-top: 40px;
+  }
+
+  h2 {
+    color: $white;
+    font-size: 1.2em;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  blockquote {
+    border-left: $brand-success;
+    font-size: 1em;
+  }
+
+  ul {
+    padding-left: 1em;
+  }
+}
+
+.l-footer {
+  padding-bottom: 20px;
+}
+
+// scss-lint:disable ImportantRule
+.no-flexboxlegacy .l-main {
+  // IE does not like table cell in middle very much.
+  display: block;
+  width: 100% !important;
+}
+
+// Columns of same height styles
+//
+// @link http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+//
+// <div class='container container-xs-height'>
+//   <div class='row row-xs-height'>
+//     <div class='col-xs-6 col-xs-height'>Testing</div>
+//     <div class='col-xs-3 col-xs-height'>Testing<br>Testing</div>
+//     <div class='col-xs-2 col-xs-height'>Testing</div>
+//     <div class='col-xs-1 col-xs-height'>Testing<br>Testing</div>
+//   </div>
+// </div>
+//
+// Styleguide 1.1
+.container-xs-height {
+  display: table;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row-xs-height {
+  display: table-row;
+}
+
+.col-xs-height {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+}
+
+@media (min-width: $screen-sm-min) {
+  .container-sm-height {
+    display: table;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .row-sm-height {
+    display: table-row;
+  }
+
+  .col-sm-height {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .container-md-height {
+    display: table;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .row-md-height {
+    display: table-row;
+  }
+
+  .col-md-height {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .container-lg-height {
+    display: table;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .row-lg-height {
+    display: table-row;
+  }
+
+  .col-lg-height {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+  }
+}
+
+// Adjust grid for 15 columns
+//
+// We have five packages, so need a 5 column grid on the frontpage
+//
+// @link http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/
+//
+// Markup:
+// <div class='row'>
+//   <div class='col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first'>
+//     <div class='views-field views-field-field-tags-picture'>
+//       <div class='field-content'>
+//         <a href='#'>
+//           <img class='subject-packages-frontpage' src='http://placehold.it/145x400' width='145' height='400' />
+//         </a>
+//       </div>
+//     </div>
+//     <div class='views-field views-field-name'>
+//       <span class='field-content'>
+//         <a href='#'>
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+//   <div class='col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first'>
+//     <div class='views-field views-field-field-tags-picture'>
+//       <div class='field-content'>
+//         <a href='#'>
+//           <img class='subject-packages-frontpage' src='http://placehold.it/145x400' width='145' height='400' />
+//         </a>
+//       </div>
+//     </div>
+//     <div class='views-field views-field-name'>
+//       <span class='field-content'>
+//         <a href='#'>
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+//   <div class='col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first'>
+//     <div class='views-field views-field-field-tags-picture'>
+//       <div class='field-content'>
+//         <a href='#'>
+//           <img class='subject-packages-frontpage' src='http://placehold.it/145x400' width='145' height='400' />
+//         </a>
+//       </div>
+//     </div>
+//     <div class='views-field views-field-name'>
+//       <span class='field-content'>
+//         <a href='#'>
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+//   <div class='col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first'>
+//     <div class='views-field views-field-field-tags-picture'>
+//       <div class='field-content'>
+//         <a href='#'>
+//           <img class='subject-packages-frontpage' src='http://placehold.it/145x400' width='145' height='400' />
+//         </a>
+//       </div>
+//     </div>
+//     <div class='views-field views-field-name'>
+//       <span class='field-content'>
+//         <a href='#'>
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+//   <div class='col-md-15 col-md-3 col-xs-15 col-xs-5 col-1 col-first'>
+//     <div class='views-field views-field-field-tags-picture'>
+//       <div class='field-content'>
+//         <a href='#'>
+//           <img class='subject-packages-frontpage' src='http://placehold.it/145x400' width='145' height='400' />
+//         </a>
+//       </div>
+//     </div>
+//     <div class='views-field views-field-name'>
+//       <span class='field-content'>
+//         <a href='#'>
+//           <strong>Subject</strong>
+//         </a>
+//       </span>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 1.2
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.col-xs-15 {
+  float: left;
+  width: 20%;
+}
+
+@media (min-width: $screen-sm-min) {
+  .col-sm-15 {
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .col-md-15 {
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .col-lg-15 {
+    float: left;
+    width: 20%;
+  }
+}

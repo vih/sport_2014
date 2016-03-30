@@ -1,0 +1,19 @@
+// Scroll to top
+//
+// Small link to go back to top from the bottom.
+.scroll-to-top {
+  background: image-url('scroll-to-top.png') no-repeat;
+  bottom: 1em;
+  cursor: pointer;
+  display: none;
+  height: 55px;
+  padding-right: 2em;
+  position: fixed;
+  right: 2em;
+  width: 55px;
+  z-index: 999;
+
+  a {
+    display: none;
+  }
+}
