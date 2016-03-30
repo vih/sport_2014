@@ -1,0 +1,205 @@
+// Special styles used specificially for vih.dk
+//
+// Styleguide 8
+
+$opacity: .7;
+
+body {
+  background: $brand-primary;
+  background-image: image-url('background/soccerfield2.jpg');
+}
+
+.sidebar-slide {
+  .views-field-title {
+    @include picture-button-opaque(-70px, 134px);
+  }
+}
+
+.teachers {
+  .views-field-title {
+    @include picture-button-opaque(-70px);
+    max-width: 145px;
+    width: 100%;
+  }
+}
+
+.subjects-page {
+  .views-field-title {
+    @include picture-button-opaque(-60px);
+    max-width: 145px;
+    width: 100%;
+  }
+}
+
+.travel .views-field-title {
+  @include picture-button-opaque(-140px, 135px, 16px);
+  max-width: 145px;
+  width: 100%;
+}
+
+.subject-packages .views-field-name {
+  @include picture-button(-90px, 1.2em);
+}
+
+.short-course-types .views-field-name {
+  @include picture-button(-55px);
+}
+
+.faciliteter .views-field-title {
+  @include picture-button(-55px);
+}
+
+// scss-lint:disable ImportantRule
+.navbar-default {
+  background: transparent !important;
+  border: transparent !important;
+
+  a {
+    color: $white;
+  }
+}
+
+.media {
+  margin-bottom: 1em;
+}
+
+// Commerce integration
+//
+// Some additional styles for the commerce integration
+//
+// Markup:
+// <div class='alert alert-commerce-add-to-cart-confirmation alert-dismissable'>
+//   <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+//   <div class='well well-lg'>
+//     <p>En person blev tilføjet til tilmeldingen.</p>
+//     <div class='btn'>
+//       <a href='/checkout' class='btn btn-success btn-lg pull-left' role='button'>Gå til betaling</a>
+//       <a href='#edit-line-item-fields' class='btn btn-default btn-lg pull-right' role='button'>Tilmeld flere</a>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 8.3
+.alert-commerce-add-to-cart-confirmation {
+  .btn {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  a {
+    margin-right: 1em;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li:nth-of-type(1n+2) {
+      display: none;
+    }
+  }
+}
+
+// Short courses
+//
+// Some additional styles for the short courses.
+.commerce-add-to-cart {
+  .views-table {
+    margin-top: 1em;
+  }
+}
+
+.field-name-commerce-price .price-amount {
+  font-size: 2em;
+}
+
+// scss-lint:disable ImportantRule
+.commerce-price-savings-formatter-prices td {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.field-name-field-pictures {
+  @include clearfix;
+  margin-bottom: 1em;
+
+  .colorbox {
+    float: left;
+    margin-right: 8px;
+  }
+}
+
+.teacher-context,
+.student-quotes {
+  .media {
+    @include clearfix;
+
+    img {
+      float: left;
+      margin-bottom: 1em;
+      margin-right: 1em;
+    }
+  }
+}
+
+// Style for the date
+//
+// Add sufficient space under the time for the course.
+//
+// TODO: Should probably be done with a more global solution.
+//
+// Styleguide 9.0
+.field-name-field-course-time {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+// Style for the date field on the lectures
+//
+// Markup:
+// <div class='field-item even'>
+//   <span class='date-display-single'>Tirsdag, november 24, 2015 -
+//     <div class='date-display-range'>
+//       <span class='date-display-start'>19:00</span> til <span class='date-display-end'>20:30</span>
+//     </div>
+//   </span>
+// </div>
+//
+// Styleguide 9.1
+
+.date-display-range {
+  display: inline;
+}
+
+.pane-content {
+  margin-bottom: 1em;
+}
+
+.field .panopoly-image-spotlight {
+  width: 100%;
+}
+
+.field-type-image,
+.media-element {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.field-name-field-vih-schedule iframe {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.l-highlighted {
+  @include pie-clearfix;
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+.pdf-reader-download-link {
+  display: block;
+}

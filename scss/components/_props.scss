@@ -1,0 +1,46 @@
+// Styles for the theme in different contexts
+//
+// Styleguide 8.5.0
+
+// Places a prop on the page
+//
+// $image - Url to image
+//
+@mixin prop($image) {
+  background: image-url($image) no-repeat 0 0;
+  height: image-height($image);
+  position: absolute;
+  width: image-width($image);
+  z-index: 100;
+}
+
+// Places a prop on the top of the page
+//
+// $image - Url to image
+//
+@mixin prop-top($image) {
+  @include prop($image);
+  top: 110 - image-height($image);
+  left: 600 - image-width($image);
+}
+
+// Places a prop in the bottom of the page
+//
+// $image - Url to image
+//
+@mixin prop-bottom($image) {
+  @include prop($image);
+  bottom: 50 - image-height($image);
+  left: image-width($image) - 80;
+}
+
+@media (min-width: $screen-md-min) {
+  // Big graphic at top of screen
+  .prop-top {
+    @include prop-top('props/float_fodboldstoevle2.png');
+  }
+
+  .prop-bottom {
+    @include prop-bottom('props/float_fodbold.png')
+  }
+}
