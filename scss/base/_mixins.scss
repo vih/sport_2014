@@ -1,0 +1,59 @@
+//
+// SASS Mixins
+// --------------------------------------------------
+
+// Puts a link over a picture for a button effect
+//
+// $top       - How long from the top of the image
+// $font-size - Font size to user
+//
+// Styleguide 8.1
+@mixin picture-button($top, $font-size: '16px') {
+  position: relative;
+  top: $top;
+  height: 0;
+
+  a {
+    background: $white;
+    color: $black;
+    font-size: $font-size;
+    padding: 5px 10px;
+    text-decoration: none;
+    width: 100px;
+  }
+}
+
+// Puts an opaque link over a picture for a button effect
+//
+// $top       - How long from the top of the image
+// $width     - How wide should the text be
+// $font-size - Font size to user
+//
+// Styleguide 8.2
+@mixin picture-button-opaque($top, $width: '135px', $font-size: '12px') {
+  display: block;
+  position: relative;
+  top: $top;
+  height: 0;
+
+  a {
+    @include opacity($opacity);
+    background: $black;
+    color: $white;
+    display: block;
+    font-size: $font-size;
+    font-weight: 600;
+    padding: 5px;
+  }
+}
+
+// image-url($image)
+//
+// Helper after switching from Compass to LibSass.
+//
+// $image - Image relative to image folder
+//
+// Styleguide 8.3
+@function image-url($url) {
+  @return url('../images/' + $url);
+}

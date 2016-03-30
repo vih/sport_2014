@@ -1,0 +1,46 @@
+//
+// Styles for Views
+// --------------------------------------------------
+
+.views-view-grid .row {
+  margin-bottom: 1em;
+}
+
+// Lange Kurser
+// --------------------------------------------------
+.view-lange-kurser,
+.view-short-courses,
+.view-vih-lectures,
+.view-article-teasers {
+  .media-body {
+    vertical-align: middle;
+    width: auto;
+  }
+}
+
+.view-lange-kurser,
+.view-short-courses,
+.view-vih-lectures {
+  .media-left {
+    height: 200px;
+    width: 200px;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.view-article-teasers {
+  .media-right {
+    height: 200px;
+    padding-right: 10px;
+    width: 200px;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

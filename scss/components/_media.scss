@@ -1,0 +1,17 @@
+.media-youtube-video {
+  clear: both;
+  float: none;
+  height: 0;
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  position: relative;
+
+  iframe {
+    left: 0;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
