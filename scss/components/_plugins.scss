@@ -15,14 +15,14 @@
 // .inverted - invert the colors
 //
 // Markup:
-// <div class="{{modifier_class}}">
+// <div class='{{modifier_class}}'>
 //   <h3>Tester hvordan det ser ud</h3>
-//   <div class="fieldable-panels-pane">
-//     <div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden">
-//       <div class="field-items">
-//         <div class="field-item even">
+//   <div class='fieldable-panels-pane'>
+//     <div class='field field-name-field-basic-text-text field-type-text-long field-label-hidden'>
+//       <div class='field-items'>
+//         <div class='field-item even'>
 //           <p>Tester ksdfs sdfkds kslf sdlkf afdksl fjsdalkf djlkasfjdsklf jlskafj sdlfk sdlkafjd lkfjsdakl jfsdklfj kldajf kldsjfkl jdasfkl jdfklj saklfj dklsaf j.</p>
-//           <p><a href="node/1">Book nu</a></p>
+//           <p><a href='node/1'>Book nu</a></p>
 //         </div>
 //       </div>
 //     </div>
@@ -34,91 +34,106 @@
 $border-radius: 6px;
 
 // Highlight pane style for text widgets.
-.pane-style-box {
+%pane-style-box {
   @include border-radius($border-radius);
   @include clearfix;
-  margin-top: 1em;
   margin-bottom: 1em;
+  margin-top: 1em;
+
   a {
-    color: black;
+    color: $black;
     text-transform: underline;
   }
 }
 
 // Minor difference in color to the content background.
 .alternate {
-  @extend .pane-style-box;
-  background: #ddd;
+  @extend %pane-style-box;
+  background: $gray-light;
   padding: 1em;
+
+  // scss-lint:disable PlaceholderInExtend
   &.cta-button .pane-content a {
     @extend .btn;
     @extend .btn-lg;
-    background: orange;
-    color: white;
+    background: $orange;
+    color: $white;
   }
 }
 
 // Larger padding than the other styles - similar to alternate.
 .jumbotron {
-  @extend .pane-style-box;
-  background: #ddd;
+  @extend %pane-style-box;
+  background: $gray-light;
   padding: 2em;
+
   h2 {
     font-size: 2em;
   }
+
+  // scss-lint:disable PlaceholderInExtend
   &.cta-button .pane-content a {
     @extend .btn;
     @extend .btn-lg;
-    background: orange;
-    color: white;
+    background: $orange;
+    color: $white;
   }
 }
 
 // Visible box with color and text change.
 .boxed {
-  @extend .pane-style-box;
-  background: #6595a9;
+  @extend %pane-style-box;
+  background: $brand-info;
+  color: $white;
   padding: 2em;
-  color: white;
+
   a {
-    color: white;
+    color: $white;
   }
+
+  // scss-lint:disable PlaceholderInExtend
   &.cta-button .pane-content a {
     @extend .btn;
     @extend .btn-lg;
-    background: white;
-    color: #6595a9;
+    background: $white;
+    color: $brand-info;
   }
 }
 
 // Major emphasis by color and text change.
-div.emphasis {
-  @extend .pane-style-box;
-  background: #fead42;
+.emphasis {
+  @extend %pane-style-box;
+  background: $orange;
   padding: 1.5em;
   text-align: center;
+
   p {
     font-size: 1.3em;
     text-align: center;
   }
-  h2.pane-title {
-    text-transform: uppercase;
+
+  .pane-title {
     font-size: 2em;
-    text-align: center;
     font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+
     a {
-      color: black;
+      color: $black;
       text-transform: underline;
     }
   }
+
   a {
-    color: black;
+    color: $black;
   }
+
+  // scss-lint:disable PlaceholderInExtend
   &.cta-button .pane-content a {
     @extend .btn;
     @extend .btn-lg;
-    background: black;
-    color: white;
+    background: $black;
+    color: $white;
   }
 }
 
@@ -139,14 +154,14 @@ div.emphasis {
 // .inverted - invert the colors
 //
 // Markup:
-// <div class="{{modifier_class}} cta-button">
+// <div class='{{modifier_class}} cta-button'>
 //   <h3>Tester hvordan det ser ud</h3>
-//   <div class="fieldable-panels-pane">
-//     <div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden">
-//       <div class="field-items">
-//         <div class="field-item even">
+//   <div class='fieldable-panels-pane'>
+//     <div class='field field-name-field-basic-text-text field-type-text-long field-label-hidden'>
+//       <div class='field-items'>
+//         <div class='field-item even'>
 //           <p>Tester ksdfs sdfkds kslf sdlkf afdksl fjsdalkf djlkasfjdsklf jlskafj sdlfk sdlkafjd lkfjsdakl jfsdklfj kldajf kldsjfkl jdasfkl jdfklj saklfj dklsaf j.</p>
-//           <p><a href="node/1">Book nu</a></p>
+//           <p><a href='node/1'>Book nu</a></p>
 //         </div>
 //       </div>
 //     </div>
@@ -155,29 +170,35 @@ div.emphasis {
 //
 // Styleguide 7.2
 .inverted {
-  text-align: center;
-  background: black;
-  color: white;
+  background: $black;
+  color: $white;
+  margin-bottom: 1em;
   padding: 2em;
+  text-align: center;
   text-transform: uppercase;
+
   h2 {
     font-size: 1.8em;
   }
+
   h3 {
     font-size: 1.6em;
   }
+
   h4 {
     font-size: 1.4em;
   }
+
   p {
     font-size: 1.2em;
   }
-  margin-bottom: 1em;
+
+  // scss-lint:disable PlaceholderInExtend
   &.cta-button .pane-content a {
     @extend .btn;
     @extend .btn-lg;
-    background: orange;
-    color: white;
+    background: $orange;
+    color: $white;
   }
 }
 
@@ -187,19 +208,19 @@ div.emphasis {
 // .contact - style image as a reach out for contact
 //
 // Markup:
-// <div class="{{modifier_class}} clearfix">
-//   <span class="helper"></span>
-//   <img src="http://placehold.it/200x300" />
-//   <div class="caption">
+// <div class='{{modifier_class}} clearfix'>
+//   <span class='helper'></span>
+//   <img src='http://placehold.it/200x300' />
+//   <div class='caption'>
 //     <p>Jeg har faktisk rigtig meget fedt at sige om skolen, men jeg skal bare lige have det sagt på en ordentlig måde, så alle kan forstå det.</p>
-//     <p style="text-align:right">- Svend Brinkman</p>
+//     <p style='text-align:right'>- Svend Brinkman</p>
 //   </div>
 // </div>
 //
 // Styleguide 7.3
 .testimonial {
-  @extend .pane-style-box;
-  border: 2px solid #ddd;
+  @extend %pane-style-box;
+  border: 2px solid $gray-light;
   padding: 3em;
 
   img {
@@ -207,10 +228,11 @@ div.emphasis {
     margin-right: 20px;
     vertical-align: center;
   }
+
   .caption {
-    padding-top: 1.5em;
+    background: image-url('blockquote.png') top right no-repeat;
     padding-right: 30px;
-    background: image-url("blockquote.png") top right no-repeat;
+    padding-top: 1.5em;
 
     .author {
       text-align: right;
@@ -219,8 +241,8 @@ div.emphasis {
 }
 
 .contact {
-  @extend .pane-style-box;
-  background: #ddd;
+  @extend %pane-style-box;
+  background: $gray-light;
   padding: 3em;
 
   img {
@@ -228,6 +250,7 @@ div.emphasis {
     margin-left: 20px;
     vertical-align: center;
   }
+
   .caption {
     padding-top: 1.5em;
   }
@@ -236,12 +259,12 @@ div.emphasis {
 // Render links widget as buttons.
 //
 // Markup:
-// <div class="btn-links">
-//   <div class="fieldable-panels-pane">
-//     <div class="item-list">
+// <div class='btn-links'>
+//   <div class='fieldable-panels-pane'>
+//     <div class='item-list'>
 //       <ul>
-//         <li class="first"><a href="#">Tester</a></li>
-//         <li class="last"><a href="#">TEste </a></li>
+//         <li class='first'><a href='#'>Tester</a></li>
+//         <li class='last'><a href='#'>Tester</a></li>
 //       </ul>
 //     </div>
 //   </div>
@@ -250,21 +273,25 @@ div.emphasis {
 // Styleguide 7.4
 .btn-links {
   @include clearfix;
-  margin-top: 1em;
   margin-bottom: 1em;
+  margin-top: 1em;
+
   ul {
+    list-style-type: none;
     margin-left: 0;
     padding-left: 0;
-    list-style-type: none;
   }
+
   li {
     display: inline;
     margin-right: 1em;
     padding-left: 0;
-  }
-  li a {
-    @extend .btn;
-    @extend .btn-success;
-    @extend .btn-lg;
+
+    // scss-lint:disable PlaceholderInExtend
+    a {
+      @extend .btn;
+      @extend .btn-success;
+      @extend .btn-lg;
+    }
   }
 }

@@ -1,128 +1,100 @@
 .message-wrapper {
-  background-color: #FFF;
+  background-color: white;
   width: 800px; }
-
-.message-wrapper .header,
-.message-wrapper .body {
-  background-color: #FFF;
-  padding: 10px; }
-
-.message-wrapper a {
-  text-decoration: none; }
-
-.message-wrapper .header {
-  background-color: #FFF;
-  color: #000000;
-  height: 100px; }
-
-.message-wrapper .header .logo {
-  float: left; }
-
-.message-wrapper .header .thank-you {
-  float: right;
-  font-size: 25px;
-  font-weight: bold; }
-
-.message-wrapper .body {
-  border: solid 1px #E9E9E9;
-  padding: 10px; }
-
-.message-wrapper .detail span.order a {
-  color: #009BD4; }
-
-.message-wrapper .detail {
-  color: #b2b2b2;
-  padding-bottom: 15px;
-  font-size: 18px; }
-
-.message-wrapper .detail span {
-  color: #00a0da; }
-
-.message-wrapper .view-order-status {
-  margin-bottom: 30px; }
-
-.message-wrapper .view-order-status a {
-  background-color: #009bd4;
-  width: auto;
-  color: white;
-  font-weight: bold;
-  padding: 10px 30px;
-  border-radius: 50px; }
-
-.message-wrapper .ship-to {
-  float: left;
-  margin-bottom: 30px; }
-
-.message-wrapper .ship-to .ship-to-title,
-.message-wrapper .ship-method .ship-method-title,
-.message-wrapper .order-summary-wrapper p.items-title {
-  font-weight: bold;
-  font-size: 20px;
-  color: black; }
-
-.message-wrapper .ship-method .express-delivery,
-.message-wrapper .ship-method p,
-.message-wrapper .ship-to .addressfield-container-inline *,
-.message-wrapper .ship-to .street-block,
-.message-wrapper .ship-to .country {
-  color: #90847c;
-  font-size: 17px; }
-
-.message-wrapper .shipping-wrapper p {
-  margin-top: 0px; }
-
-.message-wrapper .ship-to .first-name,
-.message-wrapper .ship-to .last-name,
-.message-wrapper .ship-to .name-block,
-.message-wrapper .ship-method .express-delivery {
-  font-weight: bold; }
-
-.message-wrapper .ship-method {
-  float: right;
-  /* LTR */ }
-
-.message-wrapper .shipping-wrapper,
-.message-wrapper .order-summary-wrapper {
-  clear: both; }
-
-.message-wrapper .order-summary-wrapper .view-commerce-cart-summary table {
-  border: none;
-  border-collapse: collapse;
-  width: 100%; }
-
-.message-wrapper .order-summary-wrapper .view-commerce-cart-summary th {
-  border: none;
-  background: transparent;
-  border-bottom: #AAAAAA solid 1px;
-  text-transform: none;
-  font-weight: bold;
-  text-align: left;
-  color: black; }
-
-.message-wrapper .order-summary-wrapper .view-commerce-cart-summary tr {
-  border: none;
-  background: transparent;
-  padding: 10px;
-  text-align: left; }
+  .message-wrapper .header,
+  .message-wrapper .body {
+    background-color: white;
+    padding: 10px; }
+  .message-wrapper a {
+    text-decoration: none; }
+  .message-wrapper .header {
+    background-color: white;
+    color: black;
+    height: 100px; }
+    .message-wrapper .header .logo {
+      float: left; }
+    .message-wrapper .header .thank-you {
+      float: right;
+      font-size: 25px;
+      font-weight: bold; }
+  .message-wrapper .body {
+    border: solid 1px #999999;
+    padding: 10px; }
+  .message-wrapper .detail {
+    color: #555555;
+    font-size: 18px;
+    padding-bottom: 15px; }
+    .message-wrapper .detail span {
+      color: #008000; }
+      .message-wrapper .detail span a {
+        color: #008000; }
+  .message-wrapper .view-order-status {
+    margin-bottom: 30px; }
+    .message-wrapper .view-order-status a {
+      background-color: #008000;
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      padding: 10px 30px;
+      width: auto; }
+  .message-wrapper .ship-to {
+    float: left;
+    margin-bottom: 30px; }
+  .message-wrapper .ship-to .ship-to-title,
+  .message-wrapper .ship-method .ship-method-title,
+  .message-wrapper .order-summary-wrapper .items-title {
+    color: black;
+    font-size: 20px;
+    font-weight: bold; }
+  .message-wrapper .ship-method .express-delivery,
+  .message-wrapper .ship-method p,
+  .message-wrapper .ship-to .addressfield-container-inline *,
+  .message-wrapper .ship-to .street-block,
+  .message-wrapper .ship-to .country {
+    color: #555555;
+    font-size: 17px; }
+  .message-wrapper .shipping-wrapper p {
+    margin-top: 0; }
+  .message-wrapper .ship-to .first-name,
+  .message-wrapper .ship-to .last-name,
+  .message-wrapper .ship-to .name-block,
+  .message-wrapper .ship-method .express-delivery {
+    font-weight: bold; }
+  .message-wrapper .ship-method {
+    float: right; }
+  .message-wrapper .shipping-wrapper,
+  .message-wrapper .order-summary-wrapper {
+    clear: both; }
+  .message-wrapper .order-summary-wrapper .view-commerce-cart-summary table {
+    border: 0;
+    border-collapse: collapse;
+    width: 100%; }
+    .message-wrapper .order-summary-wrapper .view-commerce-cart-summary table th {
+      background: transparent;
+      border: 0;
+      border-bottom: #999999 solid 1px;
+      color: black;
+      font-weight: bold;
+      text-align: left;
+      text-transform: none; }
+    .message-wrapper .order-summary-wrapper .view-commerce-cart-summary table tr {
+      background: transparent;
+      border: 0;
+      padding: 10px;
+      text-align: left; }
+  .message-wrapper .order-summary-wrapper .commerce-price-formatted-components {
+    float: right;
+    margin-bottom: 30px;
+    width: auto; }
+    .message-wrapper .order-summary-wrapper .commerce-price-formatted-components td {
+      padding: 10px;
+      text-align: right; }
+  .message-wrapper .question {
+    clear: both; }
+    .message-wrapper .question a {
+      color: #008000; }
 
 .view-commerce-cart-summary .views-table tbody td {
   padding: 20px 10px; }
-
-.message-wrapper .order-summary-wrapper table.commerce-price-formatted-components {
-  width: auto;
-  float: right;
-  /* LTR */
-  margin-bottom: 30px; }
-
-.message-wrapper .order-summary-wrapper table.commerce-price-formatted-components td {
-  text-align: right;
-  /* LTR */
-  padding: 10px; }
-
-.message-wrapper .question {
-  clear: both; }
-
-.message-wrapper .question a {
-  color: #009BD4; }
 
 /*# sourceMappingURL=mail.css.map */

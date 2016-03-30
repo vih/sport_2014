@@ -8,16 +8,17 @@
 // $font-size - Font size to user
 //
 // Styleguide 8.1
-@mixin picture-button($top, $font-size: "16px") {
+@mixin picture-button($top, $font-size: '16px') {
   position: relative;
   top: $top;
-  height: 0px;
+  height: 0;
+
   a {
-    color: black;
-    text-decoration: none;
+    background: $white;
+    color: $black;
     font-size: $font-size;
-    background: white;
     padding: 5px 10px;
+    text-decoration: none;
     width: 100px;
   }
 }
@@ -29,29 +30,30 @@
 // $font-size - Font size to user
 //
 // Styleguide 8.2
-@mixin picture-button-opaque($top, $width: "135px", $font-size: "12px") {
+@mixin picture-button-opaque($top, $width: '135px', $font-size: '12px') {
   display: block;
   position: relative;
   top: $top;
-  height: 0px;
+  height: 0;
+
   a {
+    @include opacity($opacity);
+    background: $black;
+    color: $white;
     display: block;
-    color: white;
     font-size: $font-size;
     font-weight: 600;
-    background: black;
-    padding: 5px 5px;
-    @include opacity($opacity);
+    padding: 5px;
   }
 }
 
-// image-url($url)
+// image-url($image)
 //
-// Helper inspired by Compass to easier include images.
+// Helper after switching from Compass to LibSass.
 //
-// $url       - Url
+// $image - Image relative to image folder
 //
 // Styleguide 8.3
-@mixin image-url($url) {
-  
+@function image-url($url) {
+  @return url('../images/' + $url);
 }

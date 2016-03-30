@@ -104,7 +104,7 @@ gulp.task('drush', shell.task([
 
 // SCSS Linting.
 gulp.task('scss-lint', function() {
-  return gulp.src('./scss/**/*.scss')
+  return gulp.src(['./scss/**/*.scss', '!./scss/radix/**/*.scss'])
     .pipe(scsslint())
     .pipe(scsslint.failReporter());
 });

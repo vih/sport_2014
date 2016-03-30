@@ -1,6 +1,7 @@
 //
 // Variables
-// --------------------------------------------------
+//
+// scss-lint:disable ColorVariable ColorKeyword
 
 // bootstrap specific variable. set to false if not using ruby + asset pipeline / compass.
 $bootstrap-sass-asset-helper: false !default;
@@ -8,6 +9,10 @@ $bootstrap-sass-asset-helper: false !default;
 
 // Global values
 // --------------------------------------------------
+
+$black: black;
+$white: white;
+$orange: orange;
 
 // Grays
 // -------------------------
@@ -42,21 +47,21 @@ $link-hover-color:      darken($link-color, 15%) !default;
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  "Lucida Sans Unicode", "Lucida Grande", sans-serif !default;
+$font-family-sans-serif:  'Lucida Sans Unicode', 'Lucida Grande', sans-serif !default;
 $font-family-serif:       Georgia, serif !default;
-$font-family-monospace:   "Lucida Console", Monaco, monospace !default;
+$font-family-monospace:   'Lucida Console', Monaco, monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
-$font-size-small:         ceil($font-size-base * 0.85) !default; // ~12px
+$font-size-small:         ceil($font-size-base * .85) !default; // ~12px
 
 $font-size-h1:            floor($font-size-base * 2) !default; // ~36px
 $font-size-h2:            floor($font-size-base * 1.7) !default; // ~30px
 $font-size-h3:            ceil($font-size-base * 1.4) !default; // ~24px
 $font-size-h4:            ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil($font-size-base * 0.85) !default; // ~12px
+$font-size-h6:            ceil($font-size-base * .85) !default; // ~12px
 
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
@@ -70,8 +75,8 @@ $headings-color:          inherit !default;
 // Iconography
 // -------------------------
 
-$icon-font-path: "bootstrap/" !default;
-$icon-font-name: "glyphicons-halflings-regular" !default;
+$icon-font-path: 'bootstrap/' !default;
+$icon-font-name: 'glyphicons-halflings-regular' !default;
 
 
 // Components
@@ -177,7 +182,7 @@ $input-group-addon-border-color: $input-border !default;
 // -------------------------
 
 $dropdown-bg:                    #fff !default;
-$dropdown-border:                rgba(0,0,0,.15) !default;
+$dropdown-border:                rgba(0, 0, 0, .15) !default;
 $dropdown-fallback-border:       #ccc !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
 
@@ -414,7 +419,7 @@ $tooltip-arrow-color:         $tooltip-bg !default;
 // -------------------------
 $popover-bg:                          #fff !default;
 $popover-max-width:                   276px !default;
-$popover-border-color:                rgba(0,0,0,.2) !default;
+$popover-border-color:                rgba(0, 0, 0, .2) !default;
 $popover-fallback-border-color:       #ccc !default;
 
 $popover-title-bg:                    darken($popover-bg, 3%) !default;
@@ -423,7 +428,7 @@ $popover-arrow-width:                 10px !default;
 $popover-arrow-color:                 #fff !default;
 
 $popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
-$popover-arrow-outer-color:           rgba(0,0,0,.25) !default;
+$popover-arrow-outer-color:           rgba(0, 0, 0, .25) !default;
 $popover-arrow-outer-fallback-color:  #999 !default;
 
 
@@ -449,7 +454,7 @@ $modal-title-padding:         15px !default;
 $modal-title-line-height:     $line-height-base !default;
 
 $modal-content-bg:                             #fff !default;
-$modal-content-border-color:                   rgba(0,0,0,.2) !default;
+$modal-content-border-color:                   rgba(0, 0, 0, .2) !default;
 $modal-content-fallback-border-color:          #999 !default;
 
 $modal-backdrop-bg:           #000 !default;
@@ -574,13 +579,13 @@ $badge-border-radius:         10px !default;
 $breadcrumb-bg:               #f5f5f5 !default;
 $breadcrumb-color:            #ccc !default;
 $breadcrumb-active-color:     $gray-light !default;
-$breadcrumb-separator:        "/" !default;
+$breadcrumb-separator:        '/' !default;
 
 
 // Carousel
 // ------------------------
 
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
+$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, .6) !default;
 
 $carousel-control-color:                      #fff !default;
 $carousel-control-width:                      15% !default;

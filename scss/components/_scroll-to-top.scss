@@ -2,16 +2,17 @@
 //
 // Small link to go back to top from the bottom.
 .scroll-to-top {
-  position: fixed;
   background: image-url('scroll-to-top.png') no-repeat;
-  cursor: pointer;
-  width: 55px;
-  height: 55px;
   bottom: 1em;
-  right: 2em;
-  padding-right: 2em;
+  cursor: pointer;
   display: none;
+  height: 55px;
+  padding-right: 2em;
+  position: fixed;
+  right: 2em;
+  width: 55px;
   z-index: 999;
+
   a {
     display: none;
   }
