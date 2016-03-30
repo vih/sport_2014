@@ -22,23 +22,25 @@
 .view-short-courses,
 .view-vih-lectures {
   .media-left {
-    width: 200px;
     height: 200px;
+    width: 200px;
+
     img {
-      width: 100%;
       height: auto;
+      width: 100%;
     }
   }
 }
 
 .view-article-teasers {
   .media-right {
-    width: 200px;
     height: 200px;
     padding-right: 10px;
+    width: 200px;
+
     img {
-      width: 100%;
       height: auto;
+      width: 100%;
     }
   }
 }

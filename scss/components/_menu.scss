@@ -1,26 +1,32 @@
 // Menu
 // Styles for Menus and Navs
-// --------------------------------------------------
+//
+// scss-lint:disable SelectorDepth, NestingDepth, IdSelector
 
 #main-menu {
   text-transform: uppercase;
+
   .dropdown-menu {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    float: none;
     margin: 0;
     padding: 0;
-    background: none;
-    border: none;
-    box-shadow: none;
     position: relative;
     width: 100%;
-    float: none;
+
     a {
       color: $gray-light;
     }
   }
+
   > li {
     .dropdown-menu {
       display: block;
+
       > li {
+
         > a {
           white-space: normal;
         }

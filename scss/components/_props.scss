@@ -7,11 +7,11 @@
 // $image - Url to image
 //
 @mixin prop($image) {
-  position: absolute;
-  z-index: 100;
-  width: image-width($image);
-  height: image-height($image);
   background: image-url($image) no-repeat 0 0;
+  height: image-height($image);
+  position: absolute;
+  width: image-width($image);
+  z-index: 100;
 }
 
 // Places a prop on the top of the page
@@ -34,13 +34,13 @@
   left: image-width($image) - 80;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $screen-md-min) {
   // Big graphic at top of screen
   .prop-top {
-    @include prop-top("props/float_fodboldstoevle2.png");
+    @include prop-top('props/float_fodboldstoevle2.png');
   }
 
   .prop-bottom {
-    @include prop-bottom("props/float_fodbold.png")
+    @include prop-bottom('props/float_fodbold.png')
   }
 }
