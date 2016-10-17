@@ -1,6 +1,6 @@
 {
-  "name": "{{Name}}",
-  "description": "{{Description}}",
+  "name": "vih/sport_2014",
+  "description": "Theme for vih.dk",
   "private": true,
   "ignore": [
     "**/.*",
